@@ -1,0 +1,65 @@
+/* Custom properties */
+:root {
+    --playBtn-margin: -35px;
+  }
+  
+  /* Wrapping */
+  .PlayBtn-Wrapper {
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Absolute positioning */
+  .PlayBtn-Btn {
+    position: absolute;
+    transform: translateX(-50%);
+    line-height: 1;
+    z-index: 100;
+  }
+    
+  /* Absolute positioning */
+  .PlayBtn-Btn.top {
+    top: calc(var(--playBtn-margin) * -1);
+  }
+  /* CSS border triangles */
+  .PlayBtn-Btn.top::before {
+    top: 100%;
+    border-top-color: var(--playBtn-background-color);
+  }
+  
+  /* Absolute positioning */
+  .PlayBtn-Btn.right {
+    left: calc(100% + var(--playBtn-margin));
+    transform: translateX(0) translateY(-50%);
+  }
+  /* CSS border triangles */
+  .PlayBtn-Btn.right::before {
+    left: calc(var(--playBtn-arrow-size) * -1);
+    transform: translateX(0) translateY(-50%);
+    border-right-color: var(--playBtn-background-color);
+  }
+  
+  /* Absolute positioning */
+  .PlayBtn-Btn.bottom {
+    bottom: calc(var(--playBtn-margin) * -1);
+  }
+  /* CSS border triangles */
+  .PlayBtn-Btn.bottom::before {
+    bottom: 100%;
+    border-bottom-color: var(--playBtn-background-color);
+  }
+  
+  /* Absolute positioning */
+  .PlayBtn-Btn.left {
+    left: -10px;
+    right: calc(100% + var(--playBtn-margin));
+    transform: translateX(0) translateY(-50%);
+  }
+  /* CSS border triangles */
+  .PlayBtn-Btn.left::before {
+    left: auto;
+    right: calc(var(--playBtn-arrow-size) * -2);
+    transform: translateX(0) translateY(-50%);
+    border-left-color: var(--playBtn-background-color);
+  }
+  
